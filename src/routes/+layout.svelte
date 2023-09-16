@@ -40,11 +40,11 @@
 				</a>
 				<a
 					class="btn btn-sm variant-ghost-surface"
-					href="https://github.com/skeletonlabs/skeleton"
+					href="https://github.com/modster/barebones-threlte"
 					target="_blank"
 					rel="noreferrer"
 				>
-					GitHub
+					{`</>`}
 				</a>
 			</svelte:fragment>
 		</AppBar>
