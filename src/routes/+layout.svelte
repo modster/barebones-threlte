@@ -15,7 +15,7 @@
 		</nav>
 		<!-- --- -->
 	</svelte:fragment>
-	<svelte:fragment slot="header">
+	<svelte:fragment slot="pageFooter">
 		<!-- App Bar -->
 		<AppBar>
 			<svelte:fragment slot="lead">
