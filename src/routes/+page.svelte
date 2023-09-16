@@ -3,6 +3,7 @@
 	import { Theatre } from '@threlte/theatre';
 	import Scene from './Scene.svelte';
 </script>
+
 <figure>
 	<Canvas>
 		<Theatre>
