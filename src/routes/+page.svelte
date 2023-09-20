@@ -1,13 +1,16 @@
 <script>
-	import { Canvas } from '@threlte/core';
-	import { Theatre } from '@threlte/theatre';
-	import Scene from './Scene.svelte';
+	import LinePlot from '$lib/LinePlot.svelte';
+	import * as d3 from 'd3';
+
+	let data = d3.ticks(-2, 2, 200).map(Math.sin);
+
+	function onMousemove(event) {
+		const [x, y] = d3.pointer(event);
+		data = data.slice(-200).concat(Math.atan2(x, y));
+	}
 </script>
 
-<figure>
-	<Canvas>
-		<Theatre>
-			<Scene />
-		</Theatre>
-	</Canvas>
-</figure>
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<div on:mousemove={onMousemove}>
+	<LinePlot {data} />
+</div>

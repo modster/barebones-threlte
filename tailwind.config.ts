@@ -22,6 +22,10 @@ export default {
 					{
 						name: 'skeleton',
 						enhancements: true
+					},
+					{
+						name: 'wintry',
+						enhancements: true
 					}
 				]
 			}
