@@ -1,10 +1,9 @@
-<script lang="ts">
+<script>
 	import LinePlot from '$lib/ddd/LinePlot.svelte';
 	import * as d3 from 'd3';
 	import { onMount } from 'svelte';
 	import { width, height } from '$lib/hxw';
-	// import { page } from '$app/stores';///
-	// import { TabAnchor, TabGroup } from '@skeletonlabs/skeleton';
+
 	let data = d3.ticks(-2, 2, 200).map(Math.sin);
 
 	function onMousemove(event) {
@@ -29,7 +28,34 @@
 
 <!-- <svelte:window bind:innerWidth={w} bind:innerHeight={h} /> -->
 
-<!-- svelte-ignore a11y-no-static-element-interactions -->
-<div on:mousemove={onMousemove}>
-	<LinePlot {data} />
+<!-- HERO
+  gradient
+  mesh
+  background
+-->
+<div class="hero">
+	<h1>Design</h1>
+	<h1>Build</h1>
+	<h1>Deploy</h1>
 </div>
+
+<!-- Paralax
+  Fixed/static
+  Background
+  Space
+  Stars
+-->
+
+<!--
+  What is this?
+  What do we do?
+  What is it good for?
+  What's so great about it?
+  How much does it cost?
+  '
+-->
+<div class="whatisdis" />
+
+<!-- CALL TO ACTION
+  todo
+-->
