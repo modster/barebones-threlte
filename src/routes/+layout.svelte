@@ -43,9 +43,9 @@
 			padding="p-1"
 			rounded=""
 			border=""
-			>
+		>
 			<!-- class="bg-surface-500/5" -->
-		
+
 			<TabAnchor href="/" selected={$page.url.pathname === '/'}>
 				<svelte:fragment slot="lead">
 					<svg

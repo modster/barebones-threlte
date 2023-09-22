@@ -7,7 +7,7 @@
 	/**
 	 * @type {string | any[] | Iterable<d3.NumberValue> | Iterable<string>}
 	 */
-	 export let data;
+	export let data;
 
 	let header = 32;
 	let footer = 32;
