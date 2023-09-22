@@ -3,25 +3,26 @@
 	import * as d3 from 'd3';
 	import { width, height } from '$lib/hxw';
 	import { writable } from 'svelte/store';
+
 	/**
-	 * @type {Iterable<NumberValue>} data
+	 * @type {string | any[] | Iterable<d3.NumberValue> | Iterable<string>}
 	 */
-	export let data;
+	 export let data;
 
 	let header = 32;
 	let footer = 32;
-	let rightSideBar = 56;
-	let leftSideBar = 80;
+	let rightSideBar = 0;
+	let leftSideBar = 0;
 	export let marginTop = 20; // + header;
 	export let marginRight = 20; // + rightSidebar;
 	export let marginBottom = 30; // - footer - header;
 	export let marginLeft = 40; // + leftSideBar;
 	/**
-	 * @type {HTMLElement}
+	 * @type {SVGGElement}
 	 */
 	let gx;
 	/**
-	 * @type {HTMLElement}
+	 * @type {SVGGElement}
 	 */
 	let gy;
 	$: x = d3.scaleLinear(

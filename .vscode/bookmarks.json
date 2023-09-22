@@ -1,0 +1,14 @@
+{
+	"files": [
+		{
+			"path": "src/routes/charts/+page.svelte",
+			"bookmarks": [
+				{
+					"line": 9,
+					"column": 35,
+					"label": ""
+				}
+			]
+		}
+	]
+}

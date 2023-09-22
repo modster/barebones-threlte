@@ -7,7 +7,7 @@
 	// import { TabAnchor, TabGroup } from '@skeletonlabs/skeleton';
 	let data = d3.ticks(-2, 2, 200).map(Math.sin);
 
-	function onMousemove(event) {
+	function onMousemove(event: any) {
 		const [x, y] = d3.pointer(event);
 		data = data.slice(-200).concat(Math.atan2(x, y));
 	}
