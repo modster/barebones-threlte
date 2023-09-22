@@ -8,10 +8,10 @@
 	 */
 	export let data;
 
-	let header = 64;
-	let footer = 64;
-	let rightSideBar = 128;
-	let leftSideBar = 128;
+	let header = 32;
+	let footer = 32;
+	let rightSideBar = 56;
+	let leftSideBar = 80;
 	export let marginTop = 20; // + header;
 	export let marginRight = 20; // + rightSidebar;
 	export let marginBottom = 30; // - footer - header;
