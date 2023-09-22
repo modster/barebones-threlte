@@ -5,12 +5,29 @@
   mesh
   background
 -->
-<div class="hero">
-	<h1 class="h1">Skeleton H1</h1>
-	<h1>Design</h1>
-	<h1>Build</h1>
-	<h1>Deploy</h1>
+<div class="container mx-auto flex h-full items-center justify-center">
+	<div class="flex flex-col items-center space-y-10 text-center">
+		<h1 class="h1">
+			<span
+				class="bg-gradient-to-br from-blue-500 to-cyan-300 box-decoration-clone bg-clip-text text-transparent"
+				>Design.</span
+			>
+		</h1>
+		<h1 class="h1">
+			<span
+				class="bg-gradient-to-br from-red-500 to-yellow-500 box-decoration-clone bg-clip-text text-transparent"
+				>Build.</span
+			>
+		</h1>
+		<h1 class="h1">
+			<span
+				class="bg-gradient-to-br from-pink-500 to-violet-500 box-decoration-clone bg-clip-text text-transparent"
+				>Deploy.</span
+			>
+		</h1>
+	</div>
 </div>
+
 
 <!-- Paralax
   Fixed/static
@@ -27,25 +44,3 @@
   How much does it cost?
   '
 -->
-<h1 class="h1">
-	<span
-		class="bg-gradient-to-br from-blue-500 to-cyan-300 bg-clip-text text-transparent box-decoration-clone"
-		>Design.</span
-	>
-</h1>
-<h1 class="h1">
-	<span
-		class="bg-gradient-to-br from-red-500 to-yellow-500 bg-clip-text text-transparent box-decoration-clone"
-		>Build.</span
-	>
-</h1>
-<h1 class="h1">
-	<span
-		class="bg-gradient-to-br from-pink-500 to-violet-500 bg-clip-text text-transparent box-decoration-clone"
-		>Deploy.</span
-	>
-</h1>
-<!-- CALL TO ACTION
-  todo
--->
-<h1 class="h1"><span class="gradient-heading">Skeleton</span></h1>

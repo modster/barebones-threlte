@@ -9,6 +9,26 @@
 					"label": ""
 				}
 			]
+		},
+		{
+			"path": "../skeleton-barebones/src/routes/+page.svelte",
+			"bookmarks": [
+				{
+					"line": 0,
+					"column": 0,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "../barebones-skeleton/src/routes/+page.svelte",
+			"bookmarks": [
+				{
+					"line": 22,
+					"column": 0,
+					"label": ""
+				}
+			]
 		}
 	]
 }
