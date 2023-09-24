@@ -29,6 +29,16 @@
 					"label": ""
 				}
 			]
+		},
+		{
+			"path": "src/routes/+page.svelte",
+			"bookmarks": [
+				{
+					"line": 10,
+					"column": 2,
+					"label": ""
+				}
+			]
 		}
 	]
 }

@@ -1,36 +1,38 @@
-<script>
-	import { T, useFrame } from '@threlte/core';
-	import { interactivity } from '@threlte/extras';
-	import { spring } from 'svelte/motion';
-	interactivity();
-	const scale = spring(1);
-	let rotation = 0;
-	useFrame((state, delta) => {
-		rotation += delta;
-	});
+<script lang="ts">
+	// import { onMount } from 'svelte'
+	import { T } from '@threlte/core';
+	import { Align, Grid, OrbitControls } from '@threlte/extras';
+	// import type { Contributions } from '$lib/types'
+
+	// let contributions: Contributions[] = []
+
+	// onMount(async () => {
+	// 	const response = await fetch('https://gh-contributions-api.vercel.app/mattcroat/2022')
+	// 	contributions = await response.json()
+	// })
 </script>
 
-<T.PerspectiveCamera
-	makeDefault
-	position={[10, 10, 10]}
-	on:create={({ ref }) => {
-		ref.lookAt(0, 1, 0);
-	}}
-/>
-<T.DirectionalLight position={[0, 10, 10]} />
-<T.AmbientLight intensity={0.5} />
-<T.Mesh
-	rotation.y={rotation}
-	position.y={1}
-	scale={$scale}
-	on:pointerenter={() => scale.set(1.5)}
-	on:pointerleave={() => scale.set(1)}
-	castShadow
->
-	<T.BoxGeometry args={[1, 2, 1]} />
-	<T.MeshStandardMaterial color="hotpink" />
-</T.Mesh>
-<T.Mesh rotation.x={-Math.PI / 2} receiveShadow>
-	<T.CircleGeometry args={[4, 40]} />
-	<T.MeshStandardMaterial color="white" />
-</T.Mesh>
+<Grid infiniteGrid sectionColor="#4a4b4a" sectionSize={20} cellSize={20} fadeDistance={400} />
+
+<T.PerspectiveCamera makeDefault position={[50, 10, 10]} fov={60}>
+	<OrbitControls enableDamping autoRotate={false} />
+</T.PerspectiveCamera>
+
+<T.AmbientLight color="#fff" intensity={0.4} />
+<T.DirectionalLight position={[0, 200, 200]} intensity={2} color="#fff" />
+<T.DirectionalLight position={[0, 200, -200]} color="#fff" intensity={2} />
+
+<!-- <Align auto position.y={100}>
+	{#each contributions as row, i}
+		{#each row as day, j}
+			{#if day}
+				<T.Group position={[0, 0, 12 * i]}>
+					<T.Mesh position={[12 * j, day.count / 2, 0]}>
+						<T.BoxGeometry args={[10, day.count, 10]} />
+						<T.MeshStandardMaterial color="#fff" />
+					</T.Mesh>
+				</T.Group>
+			{/if}
+		{/each}
+	{/each}
+</Align> -->
