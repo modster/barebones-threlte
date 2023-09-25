@@ -1,5 +1,5 @@
 /**
- * loads 500 most recent uiklines from binance
+ *
  *
  */
 

@@ -1,6 +1,5 @@
 <script>
 	import { scaleLinear } from 'd3-scale';
-	import { get } from 'svelte/store';
 	import points from './data.js';
 	import { onMount } from 'svelte';
 	import { width, height, footer } from '$lib/hxw.js';
@@ -41,7 +40,7 @@
 </script>
 
 <!-- <h2 class="h2">Arctic sea ice minimum</h2> -->
-<div class="">
+<div class="container">
 	<!-- x axis -->
 	<svg width={$width} height={$height}>
 		<!-- y axis -->
@@ -71,14 +70,16 @@
 </div>
 
 <style lang="postcss">
+	.container {
+		@apply m-0 p-0;
+	}
 	.tick {
-		@apply font-sans font-extralight text-sm;
+		@apply font-sans font-extralight text-sm text-[#888];
 	}
 
 	.tick line {
-		@apply stroke-2 stroke-slate-500;
-		/* stroke: #888; */
-		/* stroke-dasharray: 2; */
+		@apply stroke-2 stroke-[#888]/30;
+		stroke-dasharray: 2;
 	}
 
 	.tick text {

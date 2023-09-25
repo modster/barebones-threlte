@@ -21,7 +21,7 @@
 	 */
 	let gx;
 	/**
-	 * @type {SVGGElement}
+	 * @type {import('d3/axis')}
 	 */
 	let gy;
 	$: x = d3.scaleLinear(

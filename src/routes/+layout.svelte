@@ -2,21 +2,10 @@
 	import '../app.postcss';
 	import 'iconify-icon';
 	import { page } from '$app/stores';
-	import { LightSwitch, TabAnchor, TabGroup } from '@skeletonlabs/skeleton';
-	import {
-		AppShell,
-		AppBar,
-		Avatar,
-		AppRail,
-		AppRailTile,
-		AppRailAnchor
-	} from '@skeletonlabs/skeleton';
-	import { writable } from 'svelte/store';
+	import { TabAnchor, TabGroup } from '@skeletonlabs/skeleton';
+	import { AppShell } from '@skeletonlabs/skeleton';
 	import { onMount } from 'svelte';
 	import { footer } from '$lib/hxw';
-	// AppRail store:
-	const tabSet = writable(0);
-	let currentTile = 0;
 
 	/** @type {HTMLDivElement} */
 	let foo;
@@ -32,12 +21,6 @@
 	slotFooter="bg-surface-500/5 h-8 w-full m-0 p-0"
 	scrollbarGutter="auto"
 >
-	<!-- 
-	slotPageHeader="bg-surface-500/5 h-8 m-0 p-0"
-	slotPageContent="bg-surface-500/5 h-8 m-0 p-0"
-	regionPage="bg-surface-500/5 h-8 m-0 p-0"
-	slotPageFooter="bg-surface-500/5 h-8 m-0 p-0" -->
-
 	<!--
 		Footer
 	-->
@@ -50,7 +33,7 @@
 				flex="flex items-center w-10 h-10"
 				spacing="space-x-0"
 				padding="pb-1 mb-1"
-				border="border-2 border-secondary-500"
+				border="box-border border-2 border-secondary-500"
 				rounded="rounded-b-2xl"
 			>
 				<TabAnchor class="place-content-center" href="/" selected={$page.url.pathname === '/'}>
@@ -87,14 +70,6 @@
 						<iconify-icon icon="gg:profile" />
 					</svelte:fragment>
 				</TabAnchor>
-
-				<!-- <TabAnchor class="place-content-center" title="toggle dark mode">
-				<svelte:fragment>
-					<div class="flex-initial justify-end pb-1 m-1">
-					<LightSwitch />
-					</div>
-				</svelte:fragment>
-			</TabAnchor> -->
 			</TabGroup>
 		</div>
 	</svelte:fragment>

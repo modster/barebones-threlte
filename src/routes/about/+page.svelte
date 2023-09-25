@@ -19,6 +19,6 @@
 
 <style lang="postcss">
 	.iconify {
-		font-size: 1.5rem;
+		font-size: 5rem;
 	}
 </style>
