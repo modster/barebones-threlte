@@ -7,7 +7,7 @@
 
 	const yTicks = [0, 2, 4, 6, 8];
 	const xTicks = [1980, 1990, 2000, 2010];
-	const padding = { top: 25, right: 25, bottom: 25, left: 25 };
+	const padding = { top: 0, right: 0, bottom: 0, left: 0 };
 
 	$: xScale = scaleLinear().domain([minX, maxX]).range([0, $width]);
 
@@ -40,44 +40,45 @@
 	});
 </script>
 
-<!-- <h2>Arctic sea ice minimum</h2> -->
-
-<!-- x axis -->
-<svg class="chart" width={$width} height={$height}>
-	<!-- y axis -->
-	<g class="axis y-axis">
-		{#each yTicks as tick}
-			<g class="tick tick-{tick}" transform="translate(0, {yScale(tick)})">
-				<line x1="0" x2={$width} />
-				<text y="-4">{tick} {tick === 8 ? ' million sq km' : ''}</text>
-			</g>
-		{/each}
-	</g>
-
+<!-- <h2 class="h2">Arctic sea ice minimum</h2> -->
+<div class="">
 	<!-- x axis -->
-	<g class="axis x-axis">
-		{#each xTicks as tick}
-			<g class="tick tick-{tick}" transform="translate({xScale(tick)},{$height})">
-				<line y1="0" y2="-{$height}" x1="0" x2="0" />
-				<text y="4">{tick}</text>
-			</g>
-		{/each}
-	</g>
+	<svg width={$width} height={$height}>
+		<!-- y axis -->
+		<g>
+			{#each yTicks as tick}
+				<g class="tick tick-{tick}" transform="translate(0, {yScale(tick)})">
+					<line x1="0" x2={$width} />
+					<text y="-4">{tick} {tick === 8 ? ' million sq km' : ''}</text>
+				</g>
+			{/each}
+		</g>
 
-	<!-- data -->
-	<path class="path-area" d={area} />
-	<path class="path-line" d={path} />
-</svg>
+		<!-- x axis -->
+		<g>
+			{#each xTicks as tick}
+				<g class="tick tick-{tick}" transform="translate({xScale(tick)},{$height})">
+					<line y1="0" y2="-{$height}" x1="0" x2="0" />
+					<text y="-4">{tick}</text>
+				</g>
+			{/each}
+		</g>
 
-<style>
+		<!-- data -->
+		<path class="path-area" d={area} />
+		<path class="path-line" d={path} />
+	</svg>
+</div>
+
+<style lang="postcss">
 	.tick {
-		font-size: 0.725em;
-		font-weight: 200;
+		@apply font-sans font-extralight text-sm;
 	}
 
 	.tick line {
-		stroke: #888;
-		stroke-dasharray: 2;
+		@apply stroke-2 stroke-slate-500;
+		/* stroke: #888; */
+		/* stroke-dasharray: 2; */
 	}
 
 	.tick text {
