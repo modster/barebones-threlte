@@ -9,11 +9,11 @@
 	const xTicks = [1980, 1990, 2000, 2010];
 	const padding = { top: 25, right: 25, bottom: 25, left: 25 };
 
-	$: xScale = scaleLinear().domain([minX, maxX]).range([padding.left, $width]);
+	$: xScale = scaleLinear().domain([minX, maxX]).range([0, $width]);
 
 	$: yScale = scaleLinear()
 		.domain([Math.min.apply(null, yTicks), Math.max.apply(null, yTicks)])
-		.range([$height, padding.top]);
+		.range([$height, 0]);
 
 	$: minX = points[0].x;
 	$: maxX = points[points.length - 1].x;
@@ -26,8 +26,9 @@
 	// }
 	onMount(() => {
 		function resize() {
-			height.set(window.innerHeight - $footer - padding.bottom);
-			width.set(window.innerWidth - padding.right);
+			height.set(window.innerHeight - $footer);
+			width.set(window.innerWidth);
+			console.log($footer, window.innerHeight);
 		}
 
 		window.addEventListener('resize', resize);
@@ -39,28 +40,29 @@
 	});
 </script>
 
-<!-- <h2 class="h2">Arctic sea ice minimum</h2> -->
+<!-- <h2>Arctic sea ice minimum</h2> -->
 
+<!-- x axis -->
 <svg class="chart" width={$width} height={$height}>
 	<!-- y axis -->
-	<g class="axis y-axis" transform="translate({padding.left}, {padding.top})">
+	<g class="axis y-axis">
 		{#each yTicks as tick}
-			<g class="tick tick-{tick}" transform="translate(0, {yScale(tick) - padding.top})">
-				<line x2={$width - padding.left} />
+			<g class="tick tick-{tick}" transform="translate(0, {yScale(tick)})">
+				<line x1="0" x2={$width} />
 				<text y="-4">{tick} {tick === 8 ? ' million sq km' : ''}</text>
 			</g>
 		{/each}
 	</g>
 
 	<!-- x axis -->
-	<!-- <g class="axis x-axis">
+	<g class="axis x-axis">
 		{#each xTicks as tick}
 			<g class="tick tick-{tick}" transform="translate({xScale(tick)},{$height})">
-				<line y1="-{$height - padding.top - padding.bottom}" y2="0" x1="0" x2="0" />
-				<text y="0">{tick}</text>
+				<line y1="0" y2="-{$height}" x1="0" x2="0" />
+				<text y="4">{tick}</text>
 			</g>
 		{/each}
-	</g> -->
+	</g>
 
 	<!-- data -->
 	<path class="path-area" d={area} />
@@ -68,16 +70,6 @@
 </svg>
 
 <style>
-	.chart {
-		width: 100%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	svg {
-		position: relative;
-		width: 100%;
-		overflow: visible;
-	}
 	.tick {
 		font-size: 0.725em;
 		font-weight: 200;

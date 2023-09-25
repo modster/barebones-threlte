@@ -143,6 +143,3 @@
 		-->
 	<slot />
 </AppShell>
-
-<style lang="postcss">
-</style>
