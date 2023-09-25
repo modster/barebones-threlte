@@ -1,16 +1,6 @@
 {
 	"files": [
 		{
-			"path": "src/routes/charts/+page.svelte",
-			"bookmarks": [
-				{
-					"line": 9,
-					"column": 35,
-					"label": ""
-				}
-			]
-		},
-		{
 			"path": "../skeleton-barebones/src/routes/+page.svelte",
 			"bookmarks": [
 				{
@@ -34,7 +24,7 @@
 			"path": "src/routes/+page.svelte",
 			"bookmarks": [
 				{
-					"line": 10,
+					"line": 4,
 					"column": 2,
 					"label": ""
 				}

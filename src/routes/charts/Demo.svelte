@@ -1,12 +1,14 @@
-<script lang="ts">
+<script>
 	import LinePlot from '$lib/ddd/LinePlot.svelte';
 	import * as d3 from 'd3';
 	import { onMount } from 'svelte';
 	import { width, height } from '$lib/hxw';
-	// import { page } from '$app/stores';///
-	// import { TabAnchor, TabGroup } from '@skeletonlabs/skeleton';
+
 	let data = d3.ticks(-2, 2, 200).map(Math.sin);
 
+	/**
+	 * @param {any} event
+	 */
 	function onMousemove(event) {
 		const [x, y] = d3.pointer(event);
 		data = data.slice(-200).concat(Math.atan2(x, y));

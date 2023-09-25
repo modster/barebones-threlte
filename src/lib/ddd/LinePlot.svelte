@@ -1,8 +1,6 @@
 <script>
-	import { window } from '@observablehq/plot';
 	import * as d3 from 'd3';
 	import { width, height } from '$lib/hxw';
-	import { writable } from 'svelte/store';
 
 	/**
 	 * @type {string | any[] | Iterable<d3.NumberValue> | Iterable<string>}
@@ -13,6 +11,7 @@
 	let footer = 32;
 	let rightSideBar = 0;
 	let leftSideBar = 0;
+
 	export let marginTop = 20; // + header;
 	export let marginRight = 20; // + rightSidebar;
 	export let marginBottom = 30; // - footer - header;

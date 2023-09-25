@@ -1,13 +1,7 @@
-<!-- <svelte:window bind:innerWidth={w} bind:innerHeight={h} /> -->
-
-<!-- HERO
-  gradient
-  mesh
-  background
--->
 <svelte:head>
-	<title />
+	<title>home</title>
 </svelte:head>
+
 <div class="container mx-auto flex h-full items-center justify-center">
 	<div class="flex flex-col items-center space-y-10 text-center">
 		<h1 class="h1">

@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import '../app.postcss';
 	import 'iconify-icon';
 	import { page } from '$app/stores';
@@ -11,81 +11,92 @@
 		AppRailTile,
 		AppRailAnchor
 	} from '@skeletonlabs/skeleton';
-	import { writable, type Writable } from 'svelte/store';
+	import { writable } from 'svelte/store';
+	import { onMount } from 'svelte';
+	import { footer } from '$lib/hxw';
+	// AppRail store:
+	const tabSet = writable(0);
+	let currentTile = 0;
 
-	const tabSet: Writable<number> = writable(0);
-
-	let currentTile: number = 0;
+	/** @type {HTMLDivElement} */
+	let foo;
+	onMount(() => {
+		console.log('footer.offsetHeight:', foo.offsetHeight);
+		footer.set(foo.offsetHeight);
+	});
 </script>
 
 <AppShell
 	slotSidebarLeft="bg-surface-500/5 w-14 m-0 p-0 bottom-0"
 	slotSidebarRight="bg-surface-500/5 w-14 m-0 p-0"
-	slotHeader=""
 	slotFooter="bg-surface-500/5 h-8 w-full m-0 p-0"
-	scrollbarGutter=""
-	slotPageHeader="bg-surface-500/5 h-8 m-0 p-0"
-	slotPageContent=""
-	regionPage=""
-	slotPageFooter=""
+	scrollbarGutter="auto"
 >
+	<!-- 
+	slotPageHeader="bg-surface-500/5 h-8 m-0 p-0"
+	slotPageContent="bg-surface-500/5 h-8 m-0 p-0"
+	regionPage="bg-surface-500/5 h-8 m-0 p-0"
+	slotPageFooter="bg-surface-500/5 h-8 m-0 p-0" -->
+
 	<!--
 		Footer
 	-->
 	<svelte:fragment slot="footer">
-		<TabGroup
-			justify="justify-center"
-			active="variant-ghost-primary"
-			hover="hover:variant-soft-primary"
-			flex="flex items-center w-10 h-10"
-			spacing="space-x-0"
-			padding="p-0 m-0"
-			rounded=""
-			border=""
-		>
-			<TabAnchor class="place-content-center" href="/" selected={$page.url.pathname === '/'}>
-				<svelte:fragment slot="lead">
-					<iconify-icon icon="mdi:home" />
-				</svelte:fragment>
-			</TabAnchor>
-			<TabAnchor
-				class="place-content-center"
-				href="/charts"
-				selected={$page.url.pathname === '/charts'}
+		<div bind:this={foo}>
+			<TabGroup
+				justify="justify-center"
+				active="variant-ghost-primary"
+				hover="hover:variant-soft-primary"
+				flex="flex items-center w-10 h-10"
+				spacing="space-x-0"
+				padding="pb-1 mb-1"
+				border="border-2 border-secondary-500"
+				rounded="rounded-b-2xl"
 			>
-				<svelte:fragment slot="lead">
-					<iconify-icon icon="mdi:chart-line" />
-				</svelte:fragment>
-			</TabAnchor>
-			<TabAnchor
-				class="place-content-center"
-				href="/editor"
-				selected={$page.url.pathname === '/editor'}
-			>
-				<svelte:fragment slot="default">
-					<iconify-icon icon="iconamoon:3d-light" />
-				</svelte:fragment>
-			</TabAnchor>
+				<TabAnchor class="place-content-center" href="/" selected={$page.url.pathname === '/'}>
+					<svelte:fragment slot="default">
+						<iconify-icon icon="mdi:home" />
+					</svelte:fragment>
+				</TabAnchor>
+				<TabAnchor
+					class="place-content-center"
+					href="/charts"
+					selected={$page.url.pathname === '/charts'}
+				>
+					<svelte:fragment slot="default">
+						<iconify-icon icon="mdi:chart-line" />
+					</svelte:fragment>
+				</TabAnchor>
+				<TabAnchor
+					class="place-content-center"
+					href="/editor"
+					selected={$page.url.pathname === '/editor'}
+				>
+					<svelte:fragment slot="default">
+						<iconify-icon icon="iconamoon:3d-light" />
+					</svelte:fragment>
+				</TabAnchor>
 
-			<TabAnchor
-				class="place-content-center"
-				href="/about"
-				selected={$page.url.pathname === '/about'}
-				regionTab="place-self-center"
-			>
-				<svelte:fragment slot="default">
-					<iconify-icon icon="gg:profile" />
-				</svelte:fragment>
-			</TabAnchor>
+				<TabAnchor
+					class="place-content-center"
+					href="/about"
+					selected={$page.url.pathname === '/about'}
+					regionTab="place-self-center"
+				>
+					<svelte:fragment slot="default">
+						<iconify-icon icon="gg:profile" />
+					</svelte:fragment>
+				</TabAnchor>
 
-			<!-- <TabAnchor class="place-content-center" title="toggle dark mode">
+				<!-- <TabAnchor class="place-content-center" title="toggle dark mode">
 				<svelte:fragment>
 					<div class="flex-initial justify-end pb-1 m-1">
 					<LightSwitch />
 					</div>
 				</svelte:fragment>
 			</TabAnchor> -->
-		</TabGroup>
+			</TabGroup>
+		</div>
 	</svelte:fragment>
 
 	<!--
