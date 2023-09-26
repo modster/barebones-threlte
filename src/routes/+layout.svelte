@@ -15,6 +15,10 @@
 	});
 </script>
 
+<svelte:head>
+	<title>{$page.data.title}</title>
+</svelte:head>
+
 <AppShell
 	slotSidebarLeft="bg-surface-500/5 w-14 m-0 p-0 bottom-0"
 	slotSidebarRight="bg-surface-500/5 w-14 m-0 p-0"

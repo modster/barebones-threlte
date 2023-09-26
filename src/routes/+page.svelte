@@ -1,6 +1,6 @@
-<svelte:head>
-	<title>home</title>
-</svelte:head>
+<script>
+	export const title = "home";
+</script>
 
 <div class="container mx-auto flex h-full items-center justify-center">
 	<h1 class="h1 text-8xl">

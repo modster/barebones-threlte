@@ -1,6 +1,6 @@
 <script>
-	import * as d3 from 'd3';
-	import { width, height } from '$lib/hxw';
+	import * as d3 from "d3";
+	import { width, height } from "$lib/hxw";
 
 	/**
 	 * @type {string | any[] | Iterable<d3.NumberValue> | Iterable<string>}

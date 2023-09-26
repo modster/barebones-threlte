@@ -1,8 +1,8 @@
 <script>
-	import { scaleLinear } from 'd3-scale';
-	import points from './data.js';
-	import { onMount } from 'svelte';
-	import { width, height, footer } from '$lib/hxw.js';
+	import { scaleLinear } from "d3-scale";
+	import points from "./data.js";
+	import { onMount } from "svelte";
+	import { width, height, footer } from "$lib/hxw.js";
 
 	const yTicks = [0, 2, 4, 6, 8];
 	const xTicks = [1980, 1990, 2000, 2010];
@@ -16,7 +16,7 @@
 
 	$: minX = points[0].x;
 	$: maxX = points[points.length - 1].x;
-	$: path = `M${points.map((p) => `${xScale(p.x)},${yScale(p.y)}`).join('L')}`;
+	$: path = `M${points.map((p) => `${xScale(p.x)},${yScale(p.y)}`).join("L")}`;
 	$: area = `${path}L${xScale(maxX)},${yScale(0)}L${xScale(minX)},${yScale(0)}Z`;
 
 	// /** @param {number} tick */
@@ -30,11 +30,11 @@
 			console.log($footer, window.innerHeight);
 		}
 
-		window.addEventListener('resize', resize);
+		window.addEventListener("resize", resize);
 		resize();
 
 		return () => {
-			window.removeEventListener('resize', resize);
+			window.removeEventListener("resize", resize);
 		};
 	});
 </script>
@@ -48,7 +48,7 @@
 			{#each yTicks as tick}
 				<g class="tick tick-{tick}" transform="translate(0, {yScale(tick)})">
 					<line x1="0" x2={$width} />
-					<text y="-4">{tick} {tick === 8 ? ' million sq km' : ''}</text>
+					<text y="-4">{tick} {tick === 8 ? " million sq km" : ""}</text>
 				</g>
 			{/each}
 		</g>

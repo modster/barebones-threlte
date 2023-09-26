@@ -1,8 +1,8 @@
 <script>
-	import LinePlot from '$lib/ddd/LinePlot.svelte';
-	import * as d3 from 'd3';
-	import { onMount } from 'svelte';
-	import { width, height } from '$lib/hxw';
+	import LinePlot from "$lib/ddd/LinePlot.svelte";
+	import * as d3 from "d3";
+	import { onMount } from "svelte";
+	import { width, height } from "$lib/hxw";
 
 	let data = d3.ticks(-2, 2, 200).map(Math.sin);
 
@@ -20,11 +20,11 @@
 			height.set(window.innerHeight);
 		}
 
-		window.addEventListener('resize', resize);
+		window.addEventListener("resize", resize);
 		resize();
 
 		return () => {
-			window.removeEventListener('resize', resize);
+			window.removeEventListener("resize", resize);
 		};
 	});
 </script>

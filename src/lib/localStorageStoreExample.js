@@ -1,9 +1,9 @@
-import { localStorageStore } from '@skeletonlabs/skeleton';
+import { localStorageStore } from "@skeletonlabs/skeleton";
 /**
  * @type {import('svelte/store').Writable<object>}
  */
-export const config = localStorageStore('preferences', {
-	theme: 'dark',
+export const config = localStorageStore("preferences", {
+	theme: "dark",
 	header: 0,
 	footer: 0,
 	sidebarRight: 0,

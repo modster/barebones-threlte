@@ -1,7 +1,7 @@
 <script lang="ts">
 	// import { onMount } from 'svelte'
-	import { T } from '@threlte/core';
-	import { Align, Grid, OrbitControls } from '@threlte/extras';
+	import { T } from "@threlte/core";
+	import { Align, Grid, OrbitControls } from "@threlte/extras";
 	// import type { Contributions } from '$lib/types'
 
 	// let contributions: Contributions[] = []

@@ -95,5 +95,9 @@
 		"width",
 		"zIndex"
 	],
-	"workbench.colorTheme": "Abyss"
+	"workbench.colorTheme": "Abyss",
+	"vite.showTerminal": true,
+	"vite.vitepressAutoRouting": true,
+	"vite.port": 5173,
+	"vite.devCommand": "npm run dev"
 }

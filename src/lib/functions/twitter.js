@@ -3,7 +3,7 @@
  *
  */
 
-const binanceUrl = 'https://data-api.binance.vision/api/v3/';
+const binanceUrl = "https://data-api.binance.vision/api/v3/";
 
 /** @type {import("@sveltejs/kit").RequestHandler} */
 export async function GET({ fetch, params }) {
