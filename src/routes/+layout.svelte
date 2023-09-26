@@ -1,16 +1,16 @@
 <script>
-	import '../app.postcss';
-	import 'iconify-icon';
-	import { page } from '$app/stores';
-	import { TabAnchor, TabGroup } from '@skeletonlabs/skeleton';
-	import { AppShell } from '@skeletonlabs/skeleton';
-	import { onMount } from 'svelte';
-	import { footer } from '$lib/hxw';
+	import "../app.postcss";
+	import "iconify-icon";
+	import { page } from "$app/stores";
+	import { TabAnchor, TabGroup } from "@skeletonlabs/skeleton";
+	import { AppShell } from "@skeletonlabs/skeleton";
+	import { onMount } from "svelte";
+	import { footer } from "$lib/hxw";
 
 	/** @type {HTMLDivElement} */
 	let foo;
 	onMount(() => {
-		console.log('footer.offsetHeight:', foo.offsetHeight);
+		console.log("footer.offsetHeight:", foo.offsetHeight);
 		footer.set(foo.offsetHeight);
 	});
 </script>
@@ -36,7 +36,7 @@
 				border="box-border border-2 border-secondary-500"
 				rounded="rounded-b-2xl"
 			>
-				<TabAnchor class="place-content-center" href="/" selected={$page.url.pathname === '/'}>
+				<TabAnchor class="place-content-center" href="/" selected={$page.url.pathname === "/"}>
 					<svelte:fragment slot="default">
 						<iconify-icon icon="mdi:home" />
 					</svelte:fragment>
@@ -44,26 +44,46 @@
 				<TabAnchor
 					class="place-content-center"
 					href="/charts"
-					selected={$page.url.pathname === '/charts'}
+					selected={$page.url.pathname === "/charts"}
 				>
 					<svelte:fragment slot="default">
 						<iconify-icon icon="mdi:chart-line" />
 					</svelte:fragment>
 				</TabAnchor>
+
+				<TabAnchor
+					class="place-content-center"
+					href="/code"
+					selected={$page.url.pathname === "/code"}
+				>
+					<svelte:fragment slot="default">
+						<iconify-icon icon="eos-icons:code-deploy-outlined" class="iconify" />
+					</svelte:fragment>
+				</TabAnchor>
 				<TabAnchor
 					class="place-content-center"
 					href="/editor"
-					selected={$page.url.pathname === '/editor'}
+					selected={$page.url.pathname === "/editor"}
 				>
 					<svelte:fragment slot="default">
-						<iconify-icon icon="iconamoon:3d-light" />
+						<iconify-icon icon="tabler:brand-threejs" class="iconify" />
+					</svelte:fragment>
+				</TabAnchor>
+
+				<TabAnchor
+					class="place-content-center"
+					href="/blog"
+					selected={$page.url.pathname === "/blog"}
+				>
+					<svelte:fragment slot="default">
+						<iconify-icon icon="iconoir:design-pencil" class="iconify" />
 					</svelte:fragment>
 				</TabAnchor>
 
 				<TabAnchor
 					class="place-content-center"
 					href="/about"
-					selected={$page.url.pathname === '/about'}
+					selected={$page.url.pathname === "/about"}
 					regionTab="place-self-center"
 				>
 					<svelte:fragment slot="default">

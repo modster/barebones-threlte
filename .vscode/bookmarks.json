@@ -29,6 +29,21 @@
 					"label": ""
 				}
 			]
+		},
+		{
+			"path": "src/routes/api/binance/+page.js",
+			"bookmarks": [
+				{
+					"line": 3,
+					"column": 44,
+					"label": ""
+				},
+				{
+					"line": 40,
+					"column": 83,
+					"label": ""
+				}
+			]
 		}
 	]
 }

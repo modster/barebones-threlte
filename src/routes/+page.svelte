@@ -2,21 +2,21 @@
 	<title>home</title>
 </svelte:head>
 
-<div class="container mx-auto flex h-full items-center justify-center scale-150">
-	<h1 class="h1">
+<div class="container mx-auto flex h-full items-center justify-center">
+	<h1 class="h1 text-8xl">
 		<span
-			class="bg-gradient-to-br from-blue-500 to-cyan-300 box-decoration-clone bg-clip-text text-transparent"
+			class="bg-gradient-to-b from-cyan-300 to-blue-900 box-decoration-clone bg-clip-text text-transparent"
 			>Design.</span
 		>
-		<h1 class="h1">
+		<h1 class="h1 text-8xl">
 			<span
-				class="bg-gradient-to-br from-red-500 to-yellow-500 box-decoration-clone bg-clip-text text-transparent"
+				class="bg-gradient-to-b from-yellow-500 to-red-950 box-decoration-clone bg-clip-text text-transparent"
 				>Build.</span
 			>
 		</h1>
-		<h1 class="h1">
+		<h1 class="h1 text-8xl">
 			<span
-				class="bg-gradient-to-br from-pink-500 to-violet-500 box-decoration-clone bg-clip-text text-transparent"
+				class="bg-gradient-to-b from-violet-500 to-pink-950 box-decoration-clone bg-clip-text text-transparent"
 				>Deploy.</span
 			>
 		</h1>
