@@ -2,7 +2,7 @@
 	import LinePlot from "$lib/ddd/LinePlot.svelte";
 	import * as d3 from "d3";
 	import { onMount } from "svelte";
-	import { width, height } from "$lib/hxw";
+	import { width, height } from "$lib/screen";
 
 	let data = d3.ticks(-2, 2, 200).map(Math.sin);
 

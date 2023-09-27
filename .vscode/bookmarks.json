@@ -39,8 +39,18 @@
 					"label": ""
 				},
 				{
-					"line": 40,
+					"line": 39,
 					"column": 83,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "node_modules/@skeletonlabs/skeleton/dist/components/Tab/TabGroup.svelte",
+			"bookmarks": [
+				{
+					"line": 30,
+					"column": 37,
 					"label": ""
 				}
 			]

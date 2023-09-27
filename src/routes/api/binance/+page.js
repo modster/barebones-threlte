@@ -9,9 +9,6 @@
  * @prop {number} limit      - request up to 1000 bars, default 500, optional
  * @prop {Date}   starTime   - UNIX style, optional
  * @prop {Date}   Endtime    - UNIX style, optional
- *
- * @type {import('./$types').PageLoad}
- *
  * @example: GET <binanceUrl>api/v3/uiKlines?symbol=BTCUSDT&interval=1m&limit=60
  * returns data in this shape:
  *
@@ -35,6 +32,8 @@
  *
  * ```
  */
+
+/** @type import('./$types').PageLoad */
 export async function load({ fetch, params }) {
 	/** @todo: URLSearchParams */
 	const binanceUrl = new URL(

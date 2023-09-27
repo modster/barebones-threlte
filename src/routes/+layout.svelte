@@ -5,13 +5,16 @@
 	import { TabAnchor, TabGroup } from "@skeletonlabs/skeleton";
 	import { AppShell } from "@skeletonlabs/skeleton";
 	import { onMount } from "svelte";
-	import { footer } from "$lib/hxw";
+	import { footer, pageFooter } from "$lib/screen";
 
 	/** @type {HTMLDivElement} */
-	let foo;
+	let foot;
+	/** @type {HTMLDivElement} */
+	// let pageFoot;
 	onMount(() => {
-		console.log("footer.offsetHeight:", foo.offsetHeight);
-		footer.set(foo.offsetHeight);
+		console.log("footer.offsetHeight:", foot.clientHeight);
+		footer.set(foot.clientHeight);
+		// pageFooter.set(pageFoot.clientHeight);
 	});
 </script>
 
@@ -29,16 +32,15 @@
 		Footer
 	-->
 	<svelte:fragment slot="footer">
-		<div bind:this={foo}>
+		<div bind:this={foot}>
 			<TabGroup
 				justify="justify-center"
 				active="variant-ghost-primary"
 				hover="hover:variant-soft-primary"
-				flex="flex items-center w-10 h-10"
+				flex="flex items-center w-8 h-8"
 				spacing="space-x-0"
-				padding="pb-1 mb-1"
+				padding="pb-0 mb-0"
 				border="box-border border-2 border-secondary-500"
-				rounded="rounded-b-2xl"
 			>
 				<TabAnchor class="place-content-center" href="/" selected={$page.url.pathname === "/"}>
 					<svelte:fragment slot="default">
