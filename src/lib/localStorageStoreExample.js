@@ -3,13 +3,13 @@ import { localStorageStore } from "@skeletonlabs/skeleton";
  * @type {import('svelte/store').Writable<object>}
  */
 export const config = localStorageStore("preferences", {
-	theme: "dark",
-	header: 0,
-	footer: 0,
-	sidebarRight: 0,
-	sidebarLeft: 0,
-	height: 0,
-	width: 0
+  theme: "dark",
+  header: 0,
+  footer: 0,
+  sidebarRight: 0,
+  sidebarLeft: 0,
+  height: 0,
+  width: 0,
 });
 
 /*

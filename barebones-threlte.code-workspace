@@ -1,7 +1,17 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	]
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "workbench.colorTheme": "Visual Studio Dark",
+    "deno.enable": false,
+    "typescript.tsdk": "./node_modules/typescript/lib",
+    "svelte.enable-ts-plugin": true,
+    "exportall.config.relExclusion": [
+      "/src/routes/code/snippets",
+      "/src/routes/blog/api/tweeter-dev"
+    ]
+  }
 }

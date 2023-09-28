@@ -33,19 +33,38 @@
  * ```
  */
 
-/** @type import('./$types').PageLoad */
-export async function load({ fetch, params }) {
-	/** @todo: URLSearchParams */
-	const binanceUrl = new URL(
-		`https://data-api.binance.vision/api/v3/uiKlines?symbol=${params.symbol}&interval=${params.interval}&limit=${params?.limit}`
-	);
+import { error, json } from "@sveltejs/kit";
 
-	const response = await fetch(binanceUrl)
-		.then((r) => r.text())
-		.catch((e) => console.log(e));
+/** @type {Page} */
+export async function GET({ url }) {
+  const aUrl = "https://data-api.binance.vision/";
+  const path = "api/v3/ticker/price?";
+  const symbol = url.searchParams.get("symbol") ?? "BTCUSDT";
 
-	// must be object
-	return {
-		response
-	};
+  const binanceUrl = new URL(`${aUrl}${path}symbol=${symbol}`);
+  console.log(binanceUrl);
+
+  const response = await fetch(binanceUrl)
+    .then((r) => r.json())
+    .catch((e) => console.log(error(e)));
+
+  return new Response(response);
+}
+
+/**
+ * @function formData
+ * @description handler for form data
+ *
+ */
+/** @type import('../routes/blog/$types').RequestHandler */
+export async function POST(event) {
+  const body = await event.request.formData();
+
+  // log all fields
+  console.log([...body]);
+
+  return json({
+    // get a specific field's value
+    name: body.get("name") ?? "world",
+  });
 }

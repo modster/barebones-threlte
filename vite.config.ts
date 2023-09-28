@@ -4,8 +4,8 @@ import { defineConfig } from "vite";
 
 /** @type {import('@sveltejs/kit').Config} */
 export default defineConfig({
-	plugins: [sveltekit(), purgeCss()],
-	ssr: {
-		noExternal: ["three"]
-	}
+  plugins: [sveltekit(), purgeCss()],
+  ssr: {
+    noExternal: ["three"],
+  },
 });

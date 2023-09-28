@@ -1,32 +1,32 @@
 <script lang="ts">
-	import { Canvas } from "@threlte/core";
-	import Scene from "./Text.svelte";
-	import { writable } from "svelte/store";
-	// import { useTweakpane } from '$lib/useTweakpane'
-	// const { action, addInput } = useTweakpane({
-	// 	title: 'Text',
-	// 	expanded: false
-	// })
-	// const text = addInput({
-	// 	label: 'Text',
-	// 	value: 'hello world'
-	// })
-	// const fontSize = addInput({
-	// 	label: 'Font Size',
-	// 	value: 1,
-	// 	params: {
-	// 		step: 0.1,
-	// 		min: 0.1,
-	// 		max: 2
-	// 	}
-	// })
-	export let text = writable("text");
-	export let fontSize = writable(1);
+  import { Canvas } from "@threlte/core";
+  import Scene from "./Text.svelte";
+  import { writable } from "svelte/store";
+  // import { useTweakpane } from '$lib/useTweakpane'
+  // const { action, addInput } = useTweakpane({
+  // 	title: 'Text',
+  // 	expanded: false
+  // })
+  // const text = addInput({
+  // 	label: 'Text',
+  // 	value: 'hello world'
+  // })
+  // const fontSize = addInput({
+  // 	label: 'Font Size',
+  // 	value: 1,
+  // 	params: {
+  // 		step: 0.1,
+  // 		min: 0.1,
+  // 		max: 2
+  // 	}
+  // })
+  export let text = writable("text");
+  export let fontSize = writable(1);
 </script>
 
 <!-- <div use:action /> -->
 <div class="relative h-full w-full bg-orange-500/20">
-	<Canvas>
-		<Scene text={$text} fontSize={$fontSize} />
-	</Canvas>
+  <Canvas>
+    <Scene text={$text} fontSize={$fontSize} />
+  </Canvas>
 </div>

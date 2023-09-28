@@ -1,3 +1,7 @@
 {
-	"recommendations": ["vscode-icons-team.vscode-icons", "svelte.svelte-vscode", "antfu.vite"]
+  "recommendations": [
+    "vscode-icons-team.vscode-icons",
+    "svelte.svelte-vscode",
+    "antfu.vite"
+  ]
 }

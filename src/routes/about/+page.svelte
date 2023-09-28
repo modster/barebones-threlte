@@ -1,6 +1,6 @@
 <script lang="ts">
-	import "iconify-icon";
-	/** @todo need new svelte icon 🤔 animated? */
+  import "iconify-icon";
+  /** @todo need new svelte icon 🤔 animated? */
 </script>
 
 <iconify-icon icon="nonicons:svelte-16" class="iconify" />
@@ -32,7 +32,7 @@
 <iconify-icon icon="gg:profile" class="iconify" />
 
 <style lang="postcss">
-	.iconify {
-		font-size: 5rem;
-	}
+  .iconify {
+    font-size: 5rem;
+  }
 </style>

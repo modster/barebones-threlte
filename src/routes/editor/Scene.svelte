@@ -1,21 +1,27 @@
 <script lang="ts">
-	// import { onMount } from 'svelte'
-	import { T } from "@threlte/core";
-	import { Align, Grid, OrbitControls } from "@threlte/extras";
-	// import type { Contributions } from '$lib/types'
+  // import { onMount } from 'svelte'
+  import { T } from "@threlte/core";
+  import { Align, Grid, OrbitControls } from "@threlte/extras";
+  // import type { Contributions } from '$lib/types'
 
-	// let contributions: Contributions[] = []
+  // let contributions: Contributions[] = []
 
-	// onMount(async () => {
-	// 	const response = await fetch('https://gh-contributions-api.vercel.app/mattcroat/2022')
-	// 	contributions = await response.json()
-	// })
+  // onMount(async () => {
+  // 	const response = await fetch('https://gh-contributions-api.vercel.app/mattcroat/2022')
+  // 	contributions = await response.json()
+  // })
 </script>
 
-<Grid infiniteGrid sectionColor="#4a4b4a" sectionSize={20} cellSize={20} fadeDistance={400} />
+<Grid
+  infiniteGrid
+  sectionColor="#4a4b4a"
+  sectionSize={20}
+  cellSize={20}
+  fadeDistance={400}
+/>
 
 <T.PerspectiveCamera makeDefault position={[50, 10, 10]} fov={60}>
-	<OrbitControls enableDamping autoRotate={false} />
+  <OrbitControls enableDamping autoRotate={false} />
 </T.PerspectiveCamera>
 
 <T.AmbientLight color="#fff" intensity={0.4} />

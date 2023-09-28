@@ -1,12 +1,27 @@
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8">
+<script>
+  let promise = getRandomNumber();
+
+  async function getRandomNumber() {
+    const res = await fetch(`/blog/+page.server.js`);
+    const text = await res.text();
+    if (res.ok) {
+      return text;
+    } else {
+      throw new Error(text);
+    }
+  }
+
+  function handleClick() {
+    promise = getRandomNumber();
+  }
 </script>
 
-<h1 class="h1">blog</h1>
+<button on:click={handleClick}> generate random number </button>
 
-<a
-	class="twitter-timeline"
-	data-theme="dark"
-	href="https://twitter.com/XDevelopers/lists/national-parks?ref_src=twsrc%5Etfw"
->
-	A Twitter List by XDevelopers
-</a>
+{#await promise}
+  <p>...waiting</p>
+{:then number}
+  <p>{@html number}</p>
+{:catch error}
+  <p style="color: red">{error.message}</p>
+{/await}
