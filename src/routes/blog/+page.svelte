@@ -1,18 +1,18 @@
 <script>
-  let promise = getRandomNumber();
+  let promise = getRandomNumber()
 
   async function getRandomNumber() {
-    const res = await fetch(`/blog/+page.server.js`);
-    const text = await res.text();
+    const res = await fetch(`/blog/`)
+    const text = await res.text()
     if (res.ok) {
-      return text;
+      return text
     } else {
-      throw new Error(text);
+      throw new Error(text)
     }
   }
 
   function handleClick() {
-    promise = getRandomNumber();
+    promise = getRandomNumber()
   }
 </script>
 

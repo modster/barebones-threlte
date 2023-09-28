@@ -12,6 +12,7 @@
     "exportall.config.relExclusion": [
       "/src/routes/code/snippets",
       "/src/routes/blog/api/tweeter-dev"
-    ]
+    ],
+    "eslint.format.enable": true
   }
 }
