@@ -3,14 +3,13 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: 'airbnb-base',
-  overrides: [
-  ],
+  extends: "airbnb-base",
+  overrides: [],
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
+    ecmaVersion: "latest",
+    sourceType: "module",
   },
   rules: {
-    indent: ['warn', 2],
+    indent: ["warn", 2],
   },
 };

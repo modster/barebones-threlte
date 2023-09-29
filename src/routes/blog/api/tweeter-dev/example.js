@@ -1,4 +1,4 @@
-import { json } from "@sveltejs/kit";
+import { json } from '@sveltejs/kit';
 
 /** @type {import('../../api/binance/$types').RequestHandler} */
 export function GET({ request }) {
@@ -9,12 +9,12 @@ export function GET({ request }) {
   return json(
     {
       // retrieve a specific header
-      userAgent: request.headers.get("user-agent"),
+      userAgent: request.headers.get('user-agent'),
     },
     {
       // set a header on the response
-      headers: { "x-custom-header": "potato" },
-    }
+      headers: { 'x-custom-header': 'potato' },
+    },
   );
 }
 
@@ -27,7 +27,7 @@ export async function POST(event) {
 
   return json({
     // get a specific field's value
-    name: body.get("name") ?? "world",
+    name: body.get('name') ?? 'world',
   });
 }
 

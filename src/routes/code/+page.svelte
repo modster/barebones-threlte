@@ -1,6 +1,6 @@
 <script>
-  import { page } from '$app/stores'
-  export let data
+  import { page } from "$app/stores";
+  export let data;
 </script>
 
 <svelte:head>

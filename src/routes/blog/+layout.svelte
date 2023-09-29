@@ -1,6 +1,6 @@
 <script>
-  import { AppBar } from '@skeletonlabs/skeleton'
-  import { page } from '$app/stores'
+  import { AppBar } from "@skeletonlabs/skeleton";
+  import { page } from "$app/stores";
 </script>
 
 <!--
@@ -13,10 +13,10 @@
     <nav class="list-nav absolute bottom-8 m-0 p-0">
       <ul>
         <li>
-          <a href="/" aria-current={$page.url.pathname === '/'}>Home</a>
+          <a href="/" aria-current={$page.url.pathname === "/"}>Home</a>
         </li>
         <li>
-          <a href="/blog" aria-current={$page.url.pathname === '/blog'}
+          <a href="/blog" aria-current={$page.url.pathname === "/blog"}
             >Editor</a
           >
         </li>
