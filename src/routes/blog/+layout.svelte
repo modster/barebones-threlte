@@ -1,27 +1,21 @@
 <script>
-  import { AppBar } from "@skeletonlabs/skeleton";
-  import { page } from "$app/stores";
+  import { AppShell } from '@skeletonlabs/skeleton'
+  import { TableOfContents } from '@skeletonlabs/skeleton'
+  import '../../app.postcss'
+  import 'iconify-icon'
+  export let data
 </script>
 
 <!--
 		SideBar
 		Left
 	-->
-
-<AppBar slotSidebarLeft="bg-surface-500/5 w-14 m-0 p-0 bottom-0">
+<AppShell slotSidebarLeft="w-auto">
   <svelte:fragment slot="sidebarLeft">
-    <nav class="list-nav absolute bottom-8 m-0 p-0">
-      <ul>
-        <li>
-          <a href="/" aria-current={$page.url.pathname === "/"}>Home</a>
-        </li>
-        <li>
-          <a href="/blog" aria-current={$page.url.pathname === "/blog"}
-            >Editor</a
-          >
-        </li>
-      </ul>
-    </nav>
+    <h1 class="h1">{data.test.title}</h1>
+    <div class="card p-4 m-2">
+      <TableOfContents class="sticky" />
+    </div>
   </svelte:fragment>
   <slot />
-</AppBar>
+</AppShell>

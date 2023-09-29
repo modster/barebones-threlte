@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { Canvas } from "@threlte/core";
-  import Scene from "./Text.svelte";
-  import { writable } from "svelte/store";
+  import { Canvas } from '@threlte/core'
+  import Scene from './text.svelte'
+  import { writable } from 'svelte/store'
   // import { useTweakpane } from '$lib/useTweakpane'
   // const { action, addInput } = useTweakpane({
   // 	title: 'Text',
@@ -20,8 +20,6 @@
   // 		max: 2
   // 	}
   // })
-  export let text = writable("text");
-  export let fontSize = writable(1);
 </script>
 
 <!-- <div use:action /> -->
