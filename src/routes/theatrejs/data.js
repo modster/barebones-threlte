@@ -4,10 +4,10 @@ export const posts = [
     slug: 'text',
     title: 'Text',
     content: {
-      text:"hello werld",
+      text: "hello werld",
       fontSize: 1
     },
-    component: 'Text.svelte'
+    component: 'text.svelte'
   },
 
   {
@@ -21,4 +21,4 @@ export const posts = [
     title: 'This was a triumph',
     content: "<p>I'm making a note here: HUGE SUCCESS.</p>",
   },
-];
+]

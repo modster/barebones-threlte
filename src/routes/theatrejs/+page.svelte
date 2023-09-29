@@ -3,7 +3,7 @@
   import { Theatre } from '@threlte/theatre'
   import Scene from './text.svelte'
   export let data
-  let text = 'hello world'
+  let text = 'text'
   let fontSize = 1
   // let promise = data.post.component
 </script>
@@ -12,7 +12,7 @@
 <div class="relative h-full w-full">
   <Canvas>
     <Theatre>
-      <Scene {text} {fontSize} />
+      <svelte:component this={Scene} {text} {fontSize} />
     </Theatre>
   </Canvas>
 </div>
