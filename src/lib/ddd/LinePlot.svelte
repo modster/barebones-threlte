@@ -16,16 +16,16 @@
   export let marginRight = 20; // + rightSidebar;
   export let marginBottom = 30; // - footer - header;
   export let marginLeft = 40; // + leftSideBar;
-  /**
-   * @type {SVGGElement}
-   */
+
+  /** @type {SVGGElement} */
   let gx;
-  /**
-   * @type {import('d3/axis')}
-   */
+  /** @type {SVGGElement} */
   let gy;
+
+  let d = data.length;
+  /** @type {import("d3-scale").ScaleLinear} */
   $: x = d3.scaleLinear(
-    [0, data.length - 1],
+    [0, d - 1],
     [marginLeft, $width - marginRight - rightSideBar - leftSideBar]
   );
   $: y = d3.scaleLinear(d3.extent(data), [

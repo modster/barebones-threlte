@@ -1,7 +1,7 @@
 export function load() {
-    return {
-        test: {
-            title: 'test2'
-        }
-    }
+  return {
+    test: {
+      title: "test2",
+    },
+  };
 }

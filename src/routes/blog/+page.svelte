@@ -16,7 +16,7 @@
       <li>
         <div class="card p-4 m-4">
           <h2 class="h2" id={slug}>{title}</h2>
-          <p>{@html content}</p>
+          <!-- <p>{@html content}</p> -->
         </div>
       </li>
     {/each}

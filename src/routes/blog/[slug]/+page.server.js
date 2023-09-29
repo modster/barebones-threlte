@@ -1,6 +1,6 @@
 // @ts-nocheck
-import { error } from '@sveltejs/kit';
-import { posts } from '../data';
+import { error } from "@sveltejs/kit";
+import { posts } from "../data";
 
 /** @type {import('./$types').PageLoad} */
 export function load({ params }) {

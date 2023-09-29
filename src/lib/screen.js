@@ -1,4 +1,4 @@
-import { writable } from 'svelte/store';
+import { writable } from "svelte/store";
 
 /** @type import('svelte/store').Writable<number> */
 export const footer = writable(0);
