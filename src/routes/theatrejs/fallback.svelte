@@ -1,6 +1,6 @@
 <script>
-  export let fontSize
-  export let text
+  export let fontSize;
+  export let text;
 </script>
 
 <h1>Fallback</h1>

@@ -7,7 +7,7 @@ export function getTodos(userid) {
     db.set(userid, [
       {
         id: crypto.randomUUID(),
-        description: 'Learn SvelteKit',
+        description: "Learn SvelteKit",
         done: false,
       },
     ]);

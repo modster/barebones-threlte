@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 /**
  * snippet server
  * displays code
@@ -17,5 +16,5 @@ export function load({ params }) {
       title: `Title for ${params.slug} goes here`,
       content: `Content for ${params.slug} goes here`,
     },
-  };
+  }
 }

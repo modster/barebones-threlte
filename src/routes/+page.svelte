@@ -1,5 +1,5 @@
 <script>
-  export const title = 'home'
+  export const title = "home";
 </script>
 
 <div class="container mx-auto flex h-full items-center justify-center">

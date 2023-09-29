@@ -1,6 +1,5 @@
-/* eslint-disable import/prefer-default-export */
-import { posts } from './data'
-let title = 'test'
+import { posts } from "./data"
+let title = "test"
 
 export function load() {
   return {
@@ -8,6 +7,6 @@ export function load() {
       slug: post.slug,
       title: post.title,
     })),
-    test: { title }
+    test: { title },
   }
 }

@@ -1,6 +1,6 @@
 <script>
-  import { page } from "$app/stores";
-  export let data;
+  import { page } from '$app/stores'
+  export let data
 </script>
 
 <svelte:head>
@@ -8,5 +8,3 @@
 </svelte:head>
 
 <h1>{data.post.title}</h1>
-
-<div>{@html data.post.content}</div>

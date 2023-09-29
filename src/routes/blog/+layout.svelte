@@ -1,9 +1,9 @@
 <script>
-  import { AppShell } from '@skeletonlabs/skeleton'
-  import { TableOfContents } from '@skeletonlabs/skeleton'
-  import '../../app.postcss'
-  import 'iconify-icon'
-  export let data
+  import { AppShell } from "@skeletonlabs/skeleton";
+  import { TableOfContents } from "@skeletonlabs/skeleton";
+  import "../../app.postcss";
+  import "iconify-icon";
+  export let data;
 </script>
 
 <!--
