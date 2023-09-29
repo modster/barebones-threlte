@@ -1,54 +1,54 @@
 {
-  "files": [
-    {
-      "path": "../skeleton-barebones/src/routes/+page.svelte",
-      "bookmarks": [
-        {
-          "line": 0,
-          "column": 0,
-          "label": ""
-        }
-      ]
-    },
-    {
-      "path": "../barebones-skeleton/src/routes/+page.svelte",
-      "bookmarks": [
-        {
-          "line": 22,
-          "column": 0,
-          "label": ""
-        }
-      ]
-    },
-    {
-      "path": "src/routes/+page.svelte",
-      "bookmarks": [
-        {
-          "line": 4,
-          "column": 2,
-          "label": ""
-        }
-      ]
-    },
-    {
-      "path": "src/routes/api/v3/ticker/price/+server.js",
-      "bookmarks": [
-        {
-          "line": 3,
-          "column": 44,
-          "label": ""
-        }
-      ]
-    },
-    {
-      "path": "node_modules/@skeletonlabs/skeleton/dist/components/Tab/TabGroup.svelte",
-      "bookmarks": [
-        {
-          "line": 30,
-          "column": 37,
-          "label": ""
-        }
-      ]
-    }
-  ]
+	"files": [
+		{
+			"path": "../skeleton-barebones/src/routes/+page.svelte",
+			"bookmarks": [
+				{
+					"line": 0,
+					"column": 0,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "../barebones-skeleton/src/routes/+page.svelte",
+			"bookmarks": [
+				{
+					"line": 22,
+					"column": 0,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "src/routes/+page.svelte",
+			"bookmarks": [
+				{
+					"line": 4,
+					"column": 2,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "src/routes/api/v3/ticker/price/+server.js",
+			"bookmarks": [
+				{
+					"line": 3,
+					"column": 44,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "node_modules/@skeletonlabs/skeleton/dist/components/Tab/TabGroup.svelte",
+			"bookmarks": [
+				{
+					"line": 30,
+					"column": 37,
+					"label": ""
+				}
+			]
+		}
+	]
 }

@@ -1,1 +1,6 @@
-<h1>Blog</h1>
+<script>
+  export let data
+  let title = 'fallback'
+</script>
+
+<h1>Fallback</h1>

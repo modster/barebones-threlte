@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { T, useFrame } from "@threlte/core";
-  import { Grid, Text } from "@threlte/extras";
-  let rotation = 0;
-  export let text: string;
-  export let fontSize: number;
+  import { T, useFrame } from '@threlte/core'
+  import { Grid, Text } from '@threlte/extras'
+  let rotation = 0
+  export let text: string
+  export let fontSize: number
   useFrame(() => {
-    rotation += 0.002;
-  });
+    rotation += 0.0002
+  })
 </script>
 
 <T.Group rotation.y={rotation}>
@@ -15,7 +15,7 @@
     position={[0, 5, 10]}
     makeDefault
     on:create={({ ref }) => {
-      ref.lookAt(0, 0, 0);
+      ref.lookAt(0, 0, 0)
     }}
   />
 </T.Group>
