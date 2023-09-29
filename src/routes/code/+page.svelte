@@ -1,11 +1,12 @@
 <script>
-  import { page } from "$app/stores";
+  import { page } from '$app/stores'
+  export let data
 </script>
 
 <svelte:head>
-  {$page.data.title}
+  <title>{$page.data.title}</title>
 </svelte:head>
-<h1 class="h1">code</h1>
-<pre>
-    {JSON.stringify($page, null, 2)}
-</pre>
+
+<h1>{data.post.title}</h1>
+
+<div>{@html data.post.content}</div>

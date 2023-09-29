@@ -5,6 +5,9 @@ import { defineConfig } from "vite";
 export default defineConfig({
   plugins: [sveltekit(), purgeCss()],
   ssr: {
-    noExternal: ["three"],
+    noExternal: [
+      "three",
+      "OrbitControls"
+    ],
   },
 });

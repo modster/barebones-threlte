@@ -1,4 +1,5 @@
 <script>
+  //src/routes/blog/[slug]/+page.svelte
   import { page } from '$app/stores'
   export let data
 </script>
@@ -7,8 +8,10 @@
   <title>{$page.data.title}</title>
 </svelte:head>
 
-<svelte:component this={data.component} />
+<h1>{data.post.title}</h1>
+
+<div>{@html data.post.content}</div>
 
 <pre>
-  {JSON.stringify($page, null, 2)}
+  {JSON.stringify(data, null, 2)}
 </pre>

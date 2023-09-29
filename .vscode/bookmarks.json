@@ -49,16 +49,6 @@
 					"label": ""
 				}
 			]
-		},
-		{
-			"path": "src/routes/+layout.svelte",
-			"bookmarks": [
-				{
-					"line": 74,
-					"column": 26,
-					"label": ""
-				}
-			]
 		}
 	]
 }

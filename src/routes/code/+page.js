@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 /**
  * snippet server
  * displays code
@@ -8,15 +9,13 @@
  * clipboard
  * extensions?
  */
-import { getStores } from "$app/stores";
 
 /** @type {import('./$types').PageLoad}  */
-export const load = async ({ parent }) => {
-  const data = getStores();
-  // @ts-ignore
-  // @todo
-  // const parentData = await parent();
+export function load({ params }) {
   return {
-    data,
+    post: {
+      title: `Title for ${params.slug} goes here`,
+      content: `Content for ${params.slug} goes here`,
+    },
   };
-};
+}
